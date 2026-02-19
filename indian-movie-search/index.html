@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Movie Search App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 Indian Movie Search App</h1>
+            <p>Discover South & North Indian Cinema from 1980 onwards</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Enter movie name..." autocomplete="off">
+                <button id="searchBtn">Search</button>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="yearFilter">Year</label>
+                    <select id="yearFilter">
+                        <option value="">All Years</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="industryFilter">Industry</label>
+                    <select id="industryFilter">
+                        <option value="">All</option>
+                        <option value="hindi">Bollywood (Hindi)</option>
+                        <option value="telugu">Tollywood (Telugu)</option>
+                        <option value="tamil">Kollywood (Tamil)</option>
+                        <option value="kannada">Sandalwood (Kannada)</option>
+                        <option value="malayalam">Mollywood (Malayalam)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading movie details...</p>
+        </div>
+
+        <div id="error" class="error"></div>
+
+        <div id="movieContainer" class="movie-container">
+            <div class="movie-card">
+                <img id="poster" class="poster" src="" alt="Movie Poster">
+                <div class="movie-details">
+                    <h2 id="title" class="movie-title"></h2>
+                    
+                    <div class="movie-meta">
+                        <span id="year" class="meta-item"></span>
+                        <span id="language" class="meta-item"></span>
+                        <span id="genre" class="meta-item"></span>
+                    </div>
+
+                    <div class="rating-section">
+                        <div class="rating">
+                            <span class="rating-label">IMDb Rating</span>
+                            <span id="rating" class="rating-value"></span>
+                        </div>
+                        <div id="status" class="status"></div>
+                    </div>
+
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <strong>Director:</strong>
+                            <span id="director"></span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Cast:</strong>
+                            <span id="cast"></span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Box Office:</strong>
+                            <span id="boxoffice"></span>
+                        </div>
+                    </div>
+
+                    <div class="plot-section">
+                        <strong>Plot:</strong>
+                        <p id="plot"></p>
+                    </div>
+
+                    <a id="imdbLink" href="" target="_blank" class="btn-imdb">View on IMDb</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
